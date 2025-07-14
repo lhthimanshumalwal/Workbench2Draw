@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" modified="2025-07-14T19:37:00.620Z" agent="SchemaFlow" version="1.0.0" etag="schemaflow" type="device">
+  <diagram id="schema-diagram" name="amc_cpa_db">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="cell-1" value="users" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="200" height="160" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-2" value="🔑 id: INT(11) NOT NULL AUTO_INCREMENT" style="text;strokeColor=none;fillColor=#fff2cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="30" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-3" value="email: VARCHAR(255) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="50" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-4" value="first_name: VARCHAR(100) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="70" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-5" value="last_name: VARCHAR(100) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="90" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-6" value="created_at: TIMESTAMP NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="110" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-7" value="updated_at: TIMESTAMP" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="130" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-8" value="companies" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="300" y="50" width="200" height="140" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-9" value="🔑 id: INT(11) NOT NULL AUTO_INCREMENT" style="text;strokeColor=none;fillColor=#fff2cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-8">
+      <mxGeometry y="30" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-10" value="name: VARCHAR(200) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-8">
+      <mxGeometry y="50" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-11" value="tax_id: VARCHAR(50)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-8">
+      <mxGeometry y="70" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-12" value="address: TEXT" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-8">
+      <mxGeometry y="90" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-13" value="created_at: TIMESTAMP NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-8">
+      <mxGeometry y="110" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-14" value="user_companies" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="50" y="300" width="200" height="140" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-15" value="🔑 id: INT(11) NOT NULL AUTO_INCREMENT" style="text;strokeColor=none;fillColor=#fff2cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-14">
+      <mxGeometry y="30" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-16" value="🔗 user_id: INT(11) NOT NULL" style="text;strokeColor=none;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-14">
+      <mxGeometry y="50" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-17" value="🔗 company_id: INT(11) NOT NULL" style="text;strokeColor=none;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-14">
+      <mxGeometry y="70" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-18" value="role: ENUM(&#39;ADMIN&#39;,&#39;USER&#39;,&#39;VIEWER&#39;) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-14">
+      <mxGeometry y="90" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-19" value="created_at: TIMESTAMP NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-14">
+      <mxGeometry y="110" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-20" value="financial_reports" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="300" y="300" width="200" height="220" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-21" value="🔑 id: INT(11) NOT NULL AUTO_INCREMENT" style="text;strokeColor=none;fillColor=#fff2cc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="30" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-22" value="🔗 company_id: INT(11) NOT NULL" style="text;strokeColor=none;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="50" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-23" value="report_type: ENUM(&#39;BALANCE_SHEET&#39;,&#39;INCOME_STATEMENT&#39;,&#39;CASH_FLOW&#39;,&#39;TAX_RETURN&#39;) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="70" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-24" value="period_start: DATE NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="90" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-25" value="period_end: DATE NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="110" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-26" value="total_amount: DECIMAL(15,2)" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="130" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-27" value="status: ENUM(&#39;DRAFT&#39;,&#39;SUBMITTED&#39;,&#39;APPROVED&#39;,&#39;REJECTED&#39;) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="150" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-28" value="🔗 created_by: INT(11) NOT NULL" style="text;strokeColor=none;fillColor=#f8cecc;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="170" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-29" value="created_at: TIMESTAMP NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-20">
+      <mxGeometry y="190" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-30" value="FK" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERone;strokeWidth=2;" edge="1" parent="1" source="table_user_companies" target="table_users">
+      <mxGeometry width="100" height="100" relative="1" as="geometry">
+        <mxPoint x="250" y="370" as="sourcePoint"/>
+        <mxPoint x="50" y="130" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="cell-31" value="FK" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERone;strokeWidth=2;" edge="1" parent="1" source="table_user_companies" target="table_companies">
+      <mxGeometry width="100" height="100" relative="1" as="geometry">
+        <mxPoint x="250" y="370" as="sourcePoint"/>
+        <mxPoint x="300" y="120" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="cell-32" value="FK" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERone;strokeWidth=2;" edge="1" parent="1" source="table_financial_reports" target="table_companies">
+      <mxGeometry width="100" height="100" relative="1" as="geometry">
+        <mxPoint x="500" y="410" as="sourcePoint"/>
+        <mxPoint x="300" y="120" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="cell-33" value="FK" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERzeroToMany;startArrow=ERone;strokeWidth=2;" edge="1" parent="1" source="table_financial_reports" target="table_users">
+      <mxGeometry width="100" height="100" relative="1" as="geometry">
+        <mxPoint x="500" y="410" as="sourcePoint"/>
+        <mxPoint x="50" y="130" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

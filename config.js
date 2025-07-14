@@ -1,8 +1,13 @@
 // Configuration file for SchemaFlow
+require('dotenv').config();
+
 module.exports = {
-  // Hardcoded file paths as requested
-  INPUT_FILE: './samples/sample.xml', // Change to .mwb when you have a real MySQL Workbench file
-  OUTPUT_FILE: './output/schema.drawio',
+  // Database connection (from environment variable)
+  DATABASE_URL: process.env.DATABASE_URL,
+  OUTPUT_FILE: process.env.OUTPUT_FILE || './output/database-schema.drawio',
+  
+  // Test mode - set to true to use sample data instead of real database
+  TEST_MODE: process.env.TEST_MODE === 'true' || !process.env.DATABASE_URL,
   
   // Draw.io styling configuration
   DRAWIO_CONFIG: {

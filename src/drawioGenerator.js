@@ -163,9 +163,9 @@ class DrawioGenerator {
    */
   createColumnCell(column, table, position, index, parentId) {
     const cellId = this.getNextCellId();
-    const isPrimaryKey = table.primaryKeys.includes(column.id) || table.primaryKeys.includes(column.name);
+    const isPrimaryKey = table.primaryKeys.includes(column.name);
     const isForeignKey = table.foreignKeys.some(fk => 
-      fk.columns.includes(column.id) || fk.columns.includes(column.name)
+      fk.columnName === column.name
     );
     
     // Determine column styling
@@ -182,7 +182,20 @@ class DrawioGenerator {
     
     const nullable = column.nullable ? '' : ' NOT NULL';
     const autoInc = column.autoIncrement ? ' AUTO_INCREMENT' : '';
-    const dataType = column.length ? `${column.dataType}(${column.length})` : column.dataType;
+    
+    // Use fullType if available, otherwise construct from dataType
+    let dataType;
+    if (column.fullType) {
+      dataType = column.fullType.toUpperCase();
+    } else if (column.maxLength) {
+      dataType = `${column.dataType}(${column.maxLength})`;
+    } else if (column.numericPrecision && column.numericScale) {
+      dataType = `${column.dataType}(${column.numericPrecision},${column.numericScale})`;
+    } else if (column.numericPrecision) {
+      dataType = `${column.dataType}(${column.numericPrecision})`;
+    } else {
+      dataType = column.dataType;
+    }
     
     const columnText = `${prefix}${column.name}: ${dataType}${nullable}${autoInc}`;
     
@@ -271,4 +284,3 @@ class DrawioGenerator {
 }
 
 module.exports = DrawioGenerator;
-
