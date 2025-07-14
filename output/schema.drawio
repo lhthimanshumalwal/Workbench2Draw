@@ -1,0 +1,34 @@
+<mxfile host="app.diagrams.net" modified="2025-07-14T19:18:57.585Z" agent="SchemaFlow" version="1.0.0" etag="schemaflow" type="device">
+  <diagram id="schema-diagram" name="blog_schema">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1500" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="cell-1" value="users" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="200" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-2" value="id: INT(11) NOT NULL AUTO_INCREMENT" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="30" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-3" value="username: VARCHAR(50) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="50" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-4" value="email: VARCHAR(100) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-1">
+      <mxGeometry y="70" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-5" value="posts" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+      <mxGeometry x="300" y="50" width="200" height="100" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-6" value="id: INT(11) NOT NULL AUTO_INCREMENT" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-5">
+      <mxGeometry y="30" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-7" value="user_id: INT(11) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-5">
+      <mxGeometry y="50" width="200" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="cell-8" value="title: VARCHAR(200) NOT NULL" style="text;strokeColor=none;fillColor=#ffffff;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="cell-5">
+      <mxGeometry y="70" width="200" height="20" as="geometry"/>
+    </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
